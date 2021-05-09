@@ -1,0 +1,23 @@
+baseURL = "http://williamteo.github.io/"
+languageCode = "en-us"
+title = "From William's Desk"
+theme = "beautifulhugo"
+
+metaDataFormat = "yaml"
+
+[params]
+  # subtitle = ""
+  logo = "img/avatar-icon.png"
+  favicon = "img/favicon.ico"
+  dateFormat = "January 2, 2006"
+  commit = false
+  rss = true
+  comments = true
+  readingTime = true
+  useHLJS = true
+  #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+
+[author]
+  name = "William Teo"
+  website = "http://www.william-teo.com"
+  linkedin = "willteo"
