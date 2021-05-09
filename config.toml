@@ -1,4 +1,4 @@
-baseURL = "http://williamteo.github.io/"
+baseURL = "https://williamteo.github.io/"
 languageCode = "en-us"
 title = "From William's Desk"
 theme = "beautifulhugo"
@@ -19,5 +19,5 @@ metaDataFormat = "yaml"
 
 [author]
   name = "William Teo"
-  website = "http://www.william-teo.com"
+  website = "https://www.william-teo.com"
   linkedin = "willteo"
