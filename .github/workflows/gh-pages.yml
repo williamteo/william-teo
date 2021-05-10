@@ -27,4 +27,9 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: williamteo/williamteo.github.io
           publish_dir: ./public
+          #   keep_files: true
+          user_name: williamteo
+          user_email: williamteo87@hotmail.com
+          publish_branch: master
