@@ -21,3 +21,13 @@ metaDataFormat = "yaml"
   name = "William Teo"
   website = "https://www.william-teo.com"
   linkedin = "willteo"
+
+[[menu.main]]
+  name = "Blog"
+  url = "/post"
+  weight = 1
+
+[[menu.main]]
+  name = "About"
+  url = "/review"
+  weight = 2
