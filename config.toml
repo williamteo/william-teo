@@ -7,6 +7,7 @@ metaDataFormat = "yaml"
 
 [params]
   # subtitle = ""
+  mainSections = ["post","posts"]
   logo = "img/avatar-icon.png"
   favicon = "img/favicon.ico"
   dateFormat = "January 2, 2006"
@@ -15,6 +16,7 @@ metaDataFormat = "yaml"
   comments = true
   readingTime = true
   useHLJS = true
+  showRelatedPosts = true
   #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
 [author]
@@ -24,10 +26,10 @@ metaDataFormat = "yaml"
 
 [[menu.main]]
   name = "Blog"
-  url = "/post"
+  url = "/post/"
   weight = 1
 
 [[menu.main]]
   name = "About"
-  url = "/review"
+  url = "/page/about/"
   weight = 2
