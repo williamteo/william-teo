@@ -2,7 +2,7 @@ baseURL = "https://williamteo.github.io/"
 languageCode = "en-us"
 title = "From William's Desk"
 theme = "beautifulhugo"
-
+disqusShortname = "williamteo"
 metaDataFormat = "yaml"
 
 [params]
