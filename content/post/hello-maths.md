@@ -7,7 +7,7 @@ categories: []
 draft: False
 ---
 
-Here is an inline equation. $\exists x \forall y$ *s.t.* $x=y$
+This is an inline equation. $\exists x \forall y$ *s.t.* $x=y$
 
 A block equation is shown below:
 $$
