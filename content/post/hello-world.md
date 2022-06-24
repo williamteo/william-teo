@@ -7,6 +7,7 @@ categories: []
 draft: False
 ---
 
-Hi testing testing.
-=======
-Test test test...
+Testing out maths equations. $\exists x \forall y$ *s.t.* $x=y$
+$$
+\exists x \forall \textit{ s.t. } x=y
+$$
