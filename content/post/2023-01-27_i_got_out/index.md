@@ -8,13 +8,17 @@ draft: true
 ---
 In December 2022, I attended Georgia Tech's Commencement ceremony at Bobby Dodd Stadium and walked across the stage to receive my Master of Science in Computer Science diploma. 
 
+![diploma](images/diploma.png)
+
 (Since Georgia Tech doesn't show your specialization except in your transcript, and doesn't confer academic honors to Master students, can I quickly state for the record that I specialized in Machine Learning and had a 4.0/4.0 GPA? )
 
 It was a proud and significant moment for me. To me, it was a closure to a period of my life, spanning 6 years, 2 master's degrees, and the births of my 2 children. 
 
 # 切っ掛け (The Beginning)
 
-I first heard of the OMSCS program back when it first launched in 2014, back when MOOCs and Udacity were still in their first wave of popularity. In that past life, I was working as a salaryman in Tokyo. I was trying to learn R on Coursera and that set me down the rabbit hole of learning programming and computer science. But my background was in Accounting. So, I created a 5-year (ok maybe more like 8-year) plan with the end goal of obtaining a master's degree in Computer Science and I set out on my journey to explore this newfangled computer science thingy. 
+I first heard of the OMSCS program back when it first launched in 2014, back when MOOCs and Udacity were still in their first wave of popularity. In that past life, I was working as a salaryman in Tokyo. I was trying to learn R on Coursera and that set me down the rabbit hole of learning programming and computer science. But my background was in Accounting. So, I created a 5-year plan with the end goal of obtaining a master's degree in Computer Science and I set out on my journey to explore this newfangled computer science thingy. 
+
+![plan](images/5_year_plan.png)
 
 I searched around and enrolled in the University of Adelaide's Graduate Diploma in Computer Science in January 2016, where I learned fundamental CS topics such as OOP, computer systems, and networking. One of the most interesting projects I had to do was to implement a Kalman filter (in C++ no less!) to guide a spaceship to the moon for my Artificial Intelligence class. It was also then (2017-ish) that I discovered the area of Computer Science which I wanted to specialize in. 
 
@@ -67,6 +71,8 @@ Through OMSCS, I managed to identify areas where I would like to deepen my knowl
 
 I am also keen to learn about recent advances such as stable diffusion and generative AI. Luckily, OMSCS alumni can still register for classes even after graduation. I am truly grateful to Georgia Tech for creating such an inclusive and revolutionary program.
 
+![stable_diffusion](stable_diffusion.jpg)
+
 # The Future 
 
 As of January 2023, there has been news of multiple layoffs by the MANGA/FAANG/WHATCHAMACALLIT companies. Given the explosive growth in computer science/bootcamp graduates in recent years, coupled with the advent of generative AI such as ChatGPT, some people might feel that a career in tech is bleak.
@@ -75,5 +81,4 @@ However, a common counterexample given is how Excel did not cause accountants to
 
 Having some free time now, I am looking forward to working and collaborating on awesome ML projects. I am always happy to jump on a call or connect over coffee to discuss interesting research or ideas, so feel free to [reach out](mailto:mail@william-teo.com)!
 
-# Go Jackets!
 # Go Jackets!
