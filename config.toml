@@ -4,6 +4,7 @@ title = "From William's Desk"
 theme = "beautifulhugo"
 disqusShortname = "williamteo"
 metaDataFormat = "yaml"
+enableGitInfo = true
 
 [params]
   # subtitle = ""
@@ -19,6 +20,12 @@ metaDataFormat = "yaml"
   showRelatedPosts = true
   #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
+[frontmatter]
+  lastmod = ["lastmod", ":git", "date", "publishDate"]
+
+[permalinks]
+  post = "/:year/:month/:title/"
+
 [author]
   name = "William Teo"
   website = "https://www.william-teo.com"
@@ -26,10 +33,17 @@ metaDataFormat = "yaml"
 
 [[menu.main]]
   name = "Blog"
-  url = "/post/"
+  url = "post"
   weight = 1
 
 [[menu.main]]
-  name = "About"
-  url = "/page/about/"
+  name = "Tags"
+  url = "tags"
   weight = 2
+
+[[menu.main]]
+  name = "About"
+  url = "page/about/"
+  weight = 3
+
+

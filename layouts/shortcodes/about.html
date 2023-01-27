@@ -1,0 +1,13 @@
+<!-- Get src param from shortcode -->
+{{ $src := $.Get "src"}}
+
+<!-- Get alt param from shortcode -->
+{{ $alt := $.Get "alt"}}
+
+<!-- Get image -->
+{{$img := resources.GetMatch $src}}
+
+<div>
+    <img src="{{ $img.RelPermalink }}" alt="{{ $alt }}"
+        style="width: 300px; height: 300px; object-fit: cover; object-position: left; border-radius: 50%" />
+</div>
