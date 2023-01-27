@@ -4,7 +4,7 @@ date: 2021-05-16T16:41:12+08:00
 subtitle: "Testing rendering of math questions"
 tags: ["maths", "equations"]
 categories: []
-draft: False
+draft: false
 ---
 
 This is an inline equation. $\exists x \forall y$ *s.t.* $x=y$

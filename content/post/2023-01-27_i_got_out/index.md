@@ -1,14 +1,14 @@
 ---
 title: "I Got Out!"
-date: 2023-01-27
+date: 2023-01-27T15:17:05+08:00
 subtitle: "Thoughts and Reflections on my OMSCS Journey"
 tags: ["OMSCS"]
 categories: []
-draft: true
+draft: false
 ---
-In December 2022, I attended Georgia Tech's Commencement ceremony at Bobby Dodd Stadium and walked across the stage to receive my Master of Science in Computer Science diploma. 
+On 16 December 2022, I attended Georgia Tech's Commencement ceremony at Bobby Dodd Stadium and walked across the stage to receive my Master of Science in Computer Science diploma. 
 
-![diploma](images/diploma.png)
+![Master of Science in Computer Science diploma](images/diploma.png "My Master of Science in Computer Science diploma")
 
 (Since Georgia Tech doesn't show your specialization except in your transcript, and doesn't confer academic honors to Master students, can I quickly state for the record that I specialized in Machine Learning and had a 4.0/4.0 GPA? )
 
@@ -18,7 +18,7 @@ It was a proud and significant moment for me. To me, it was a closure to a perio
 
 I first heard of the OMSCS program back when it first launched in 2014, back when MOOCs and Udacity were still in their first wave of popularity. In that past life, I was working as a salaryman in Tokyo. I was trying to learn R on Coursera and that set me down the rabbit hole of learning programming and computer science. But my background was in Accounting. So, I created a 5-year plan with the end goal of obtaining a master's degree in Computer Science and I set out on my journey to explore this newfangled computer science thingy. 
 
-![plan](images/5_year_plan.png)
+![5-year Plan](images/5_year_plan.png "5-year plan as of September 2015")
 
 I searched around and enrolled in the University of Adelaide's Graduate Diploma in Computer Science in January 2016, where I learned fundamental CS topics such as OOP, computer systems, and networking. One of the most interesting projects I had to do was to implement a Kalman filter (in C++ no less!) to guide a spaceship to the moon for my Artificial Intelligence class. It was also then (2017-ish) that I discovered the area of Computer Science which I wanted to specialize in. 
 
@@ -71,7 +71,7 @@ Through OMSCS, I managed to identify areas where I would like to deepen my knowl
 
 I am also keen to learn about recent advances such as stable diffusion and generative AI. Luckily, OMSCS alumni can still register for classes even after graduation. I am truly grateful to Georgia Tech for creating such an inclusive and revolutionary program.
 
-![stable_diffusion](stable_diffusion.jpg)
+![Stable Diffusion Image](images/stable_diffusion.png '"Elephant in Shibuya" rendered by Stable Diffusion')
 
 # The Future 
 
