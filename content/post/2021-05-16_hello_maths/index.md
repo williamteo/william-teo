@@ -1,7 +1,7 @@
 ---
 title: "Hello Maths"
 date: 2021-05-16T16:41:12+08:00
-subtitle: "Testing rendering of math questions"
+subtitle: "Testing rendering of math equations"
 tags: ["maths", "equations"]
 categories: []
 draft: false
