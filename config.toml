@@ -19,7 +19,7 @@ enableGitInfo = true
   readingTime = true
   useHLJS = true
   showRelatedPosts = true
-  commit = "https://github.com/williamteo/william-teo/tree/"
+  commit = "https://github.com/williamteo/williamteo.github.io/tree/"
   #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
 
 [frontmatter]
