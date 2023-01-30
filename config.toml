@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "From William's Desk"
 theme = "beautifulhugo"
 disqusShortname = "williamteo"
+googleAnalytics = "G-KDQT4L3GWH"
 metaDataFormat = "yaml"
 enableGitInfo = true
 
