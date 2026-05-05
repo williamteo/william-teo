@@ -1,0 +1,24 @@
+{{ if .Params.citable }}
+{{ $author := .Site.Params.author.name }}
+{{ $lastName := index (split $author " ") 1 }}
+{{ $firstName := index (split $author " ") 0 }}
+{{ $year := .Date.Format "2006" }}
+{{ $titleWords := split .Title " " }}
+{{ $significantWord := "" }}
+{{ range $titleWords }}
+  {{ if and (eq $significantWord "") (not (in (slice "A" "An" "The" "Of" "In" "On" "For" "To") .)) }}
+    {{ $significantWord = . | lower }}
+  {{ end }}
+{{ end }}
+{{ $key := printf "%s%s%s" $lastName $year $significantWord }}
+<div class="citation-box">
+  <p class="citation-label">If you found this useful, feel free to cite or share. Cited as:</p>
+  <pre class="citation-text">@article{{ "{" }}{{ $key }},
+  title   = "{{ .Title }}",
+  author  = "{{ $lastName }}, {{ $firstName }}",
+  journal = "{{ .Site.Title }}",
+  year    = "{{ $year }}",
+  url     = "{{ .Permalink }}"
+{{ "}" }}</pre>
+</div>
+{{ end }}

@@ -1,9 +1,12 @@
 baseURL = "https://williamteo.github.io/"
-languageCode = "en-us"
+locale = "en-us"
 title = "From William's Desk"
 theme = "beautifulhugo"
-disqusShortname = "williamteo"
-googleAnalytics = "G-KDQT4L3GWH"
+[services]
+  [services.disqus]
+    shortname = "williamteo"
+  [services.googleAnalytics]
+    id = "G-KDQT4L3GWH"
 metaDataFormat = "yaml"
 enableGitInfo = true
 
@@ -17,21 +20,35 @@ enableGitInfo = true
   rss = true
   comments = true
   readingTime = true
+  homeTitle = "From William's Desk"
   useHLJS = true
+  math = true
   showRelatedPosts = true
   commit = "https://github.com/williamteo/williamteo.github.io/tree/"
   #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
+
+  [params.author]
+    name = "William Teo"
+    website = "https://www.william-teo.com"
+    linkedin = "willteo"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.extras]
+        [markup.goldmark.extensions.extras.blockquote]
+          enable = true
+    [markup.goldmark.extensions.passthrough]
+      enable = true
+      [markup.goldmark.extensions.passthrough.delimiters]
+        block  = [["$$", "$$"]]
+        inline = [["$", "$"]]
 
 [frontmatter]
   lastmod = ["lastmod", ":git", "date", "publishDate"]
 
 [permalinks]
   post = "/:year/:month/:title/"
-
-[author]
-  name = "William Teo"
-  website = "https://www.william-teo.com"
-  linkedin = "willteo"
 
 [[menu.main]]
   name = "Blog"

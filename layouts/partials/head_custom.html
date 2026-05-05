@@ -1,0 +1,109 @@
+<style>
+blockquote.alert {
+  border-left: 4px solid #ccc;
+  border-radius: 4px;
+  padding: 0;
+  margin: 1.5em 0;
+  font-style: normal;
+  color: inherit;
+  overflow: hidden;
+}
+blockquote.alert .alert-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-weight: 800;
+  font-size: 0.95em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+blockquote.alert .alert-icon { font-size: 1.2em; line-height: 1; }
+blockquote.alert .alert-divider {
+  margin: 0;
+  border: none;
+  height: 1px;
+}
+blockquote.alert .alert-body {
+  padding: 12px 16px;
+}
+blockquote.alert .alert-body p:first-child { margin-top: 0; }
+blockquote.alert .alert-body p:last-child  { margin-bottom: 0; }
+
+blockquote.alert-note      { border-color: #0969da; }
+blockquote.alert-note      .alert-heading { background: #b6d9fb; color: #0550ae; }
+blockquote.alert-note      .alert-divider { background: #0969da; }
+blockquote.alert-note      .alert-body    { background: #ddf4ff; }
+
+blockquote.alert-tip       { border-color: #1a7f37; }
+blockquote.alert-tip       .alert-heading { background: #9dd5ae; color: #0f5323; }
+blockquote.alert-tip       .alert-divider { background: #1a7f37; }
+blockquote.alert-tip       .alert-body    { background: #dafbe1; }
+
+blockquote.alert-important { border-color: #8250df; }
+blockquote.alert-important .alert-heading { background: #d2b8f5; color: #5a2da0; }
+blockquote.alert-important .alert-divider { background: #8250df; }
+blockquote.alert-important .alert-body    { background: #fbefff; }
+
+blockquote.alert-warning   { border-color: #9a6700; }
+blockquote.alert-warning   .alert-heading { background: #f0d070; color: #6e4a00; }
+blockquote.alert-warning   .alert-divider { background: #9a6700; }
+blockquote.alert-warning   .alert-body    { background: #fff8c5; }
+
+blockquote.alert-caution   { border-color: #cf222e; }
+blockquote.alert-caution   .alert-heading { background: #f5a8ac; color: #8c1519; }
+blockquote.alert-caution   .alert-divider { background: #cf222e; }
+blockquote.alert-caution   .alert-body    { background: #ffebe9; }
+
+/* IEEE-style footnotes */
+sup:has(> a.footnote-ref) {
+  vertical-align: baseline !important;
+  font-size: 1em !important;
+  top: 0 !important;
+  position: static !important;
+}
+a.footnote-ref::before { content: "["; }
+a.footnote-ref::after  { content: "]"; }
+
+.footnotes {
+  margin-top: 1em;
+  font-size: 0.88em;
+}
+.footnotes > hr {
+  display: none;
+}
+.footnotes::before {
+  content: "References";
+  display: block;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 0.75em;
+}
+.footnotes ol {
+  padding-left: 1.5em;
+}
+.footnotes li {
+  margin-bottom: 0.4em;
+}
+.footnotes .footnote-backref {
+  display: none;
+}
+
+.citation-box {
+  margin: 2.5em 0 1em;
+}
+.citation-label {
+  margin: 0 0 6px;
+  font-size: 0.95em;
+}
+.citation-text {
+  margin: 0;
+  font-size: 0.85em;
+  white-space: pre-wrap;
+  word-break: break-all;
+  background: #f8f8f8;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: none;
+}
+</style>

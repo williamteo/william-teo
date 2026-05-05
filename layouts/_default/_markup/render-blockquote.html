@@ -1,0 +1,15 @@
+{{ if .AlertType }}
+{{ $icons := dict "note" "ℹ️" "tip" "💡" "important" "❗" "warning" "⚠️" "caution" "🔴" }}
+<blockquote class="alert alert-{{ .AlertType | lower }}">
+  <div class="alert-heading">
+    <span class="alert-icon">{{ index $icons (.AlertType | lower) }}</span>
+    <span class="alert-label">{{ .AlertType | title }}</span>
+  </div>
+  <hr class="alert-divider">
+  <div class="alert-body">{{ .Text | safeHTML }}</div>
+</blockquote>
+{{ else }}
+<blockquote>
+  {{ .Text | safeHTML }}
+</blockquote>
+{{ end }}
