@@ -17,7 +17,6 @@ Running alongside all of this is my personal interest in mathematical topics suc
 
 ## Publications
 
-**A natural language processing approach to improve demand forecasting in long supply chains**
-William Teo — *MIT, 2020*
-Master of Engineering thesis. Investigates the application of large language models and deep learning architectures to demand forecasting problems.
-[Thesis](https://dspace.mit.edu/handle/1721.1/127104)
+1. Teo, W. ["A natural language processing approach to improve demand forecasting in long supply chains."](https://dspace.mit.edu/handle/1721.1/127104) Master of Engineering Thesis, MIT, 2020.
+
+    A deep learning model (NEMO) that uses NLP signals from public text to forecast commodity demand in long supply chains, where information sharing across firms is rarely feasible.
