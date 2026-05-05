@@ -8,5 +8,13 @@ document.addEventListener("DOMContentLoaded", function() {
       { left: "\\(", right: "\\)", display: false }
     ]
   });
+
+  var copyright = document.querySelector("p.credits.copyright");
+  if (copyright) {
+    copyright.innerHTML = copyright.innerHTML.replace(
+      /©\s*[\d\s\-–]+/,
+      "© 2021 - " + new Date().getFullYear() + " "
+    );
+  }
 });
 </script>
