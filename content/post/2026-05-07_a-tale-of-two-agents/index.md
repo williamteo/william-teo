@@ -1,6 +1,6 @@
 ---
 title: A Tale of Two Agents
-date: 2026-05-07T09:00:00+08:00
+date: 2026-05-07T03:00:00+08:00
 subtitle: "A robotics researcher's plea for precision"
 tags: ["robotics", "LLM", "AI", "MARL", "multi-agents", "MAS"]
 draft: false
