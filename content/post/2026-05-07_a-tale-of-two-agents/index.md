@@ -23,7 +23,7 @@ The easy version says: *LLM agents aren't really agents — only embodied robots
 
 So the argument is **not** that LLM agents are "merely" anything.
 
-My argument is this: **agents in different media impose different engineering constraints, and the constraints don't transfer.** The robotics community and the LLM-agent community are both doing legitimate work on legitimate agents — but the engineering, the failure modes, the scaling bounds, the meaning of "skill," the meaning of "strategy," and the meaning of "emergent coordination" are *substantively different across media*. Sharing a noun makes us forget this.
+My argument is this: **agents in different medium impose different engineering constraints, and the constraints don't transfer.** The robotics community and the LLM-agent community are both doing legitimate work on legitimate agents — but the engineering, the failure modes, the scaling bounds, the meaning of "skill," the meaning of "strategy," and the meaning of "emergent coordination" are *substantively different across medium*. Sharing a noun makes us forget this.
 
 That's the conflation I think is worth fighting against.
 
