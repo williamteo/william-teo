@@ -1,7 +1,6 @@
 {{ if .Params.citable }}
-{{ $author := .Site.Params.author.name }}
-{{ $lastName := index (split $author " ") 1 }}
-{{ $firstName := index (split $author " ") 0 }}
+{{ $lastName := "Teo" }}
+{{ $firstName := "William W. J." }}
 {{ $year := .Date.Format "2006" }}
 {{ $titleWords := split .Title " " }}
 {{ $significantWord := "" }}
