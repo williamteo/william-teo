@@ -2,7 +2,7 @@
 title: A Tale of Two Agents
 date: 2026-05-07T03:00:00+08:00
 subtitle: "A robotics researcher's plea for precision"
-tags: ["robotics", "LLM", "AI", "MARL", "multi-agents", "MAS"]
+tags: ["robotics", "LLM", "AI", "MARL", "multi-agent", "MAS"]
 draft: false
 citable: true
 ---
@@ -186,7 +186,7 @@ Hybrids that use the right representation at each layer — language where it ea
 
 In the end, this screed of mine isn't about policing language or the usage of "agent" — it is about keeping the road between two communities open.
 
-So: keep using "agent" and "multi-agents." They are too useful as words to give up, and both communities are entitled to them. But when you do, expect the follow-up question — and ask it of others.
+So: keep using "agent" and "multi-agent." They are too useful as words to give up, and both communities are entitled to them. But when you do, expect the follow-up question — and ask it of others.
 
 > [!IMPORTANT]
 > **What medium does your agent(s) act through?**
