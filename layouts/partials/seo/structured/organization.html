@@ -1,0 +1,26 @@
+{{- /* PROJECT OVERRIDE of the theme's organization schema.
+       The upstream template concatenates optional fields with hand-written
+       commas and emits invalid JSON as soon as `socialProfiles` is set.
+
+       On a personal research site the Person entity in seo/structured/person
+       is the correct subject, and a second entity carrying the same name and
+       the same sameAs links only splits the signal. So an Organization is
+       emitted only when one is genuinely configured via `organizationName`. */ -}}
+{{- with site.Params.organizationName -}}
+  {{- $org := dict
+    "@context" "https://schema.org"
+    "@type" "Organization"
+    "@id" (printf "%s#organization" site.BaseURL)
+    "name" .
+    "url" site.BaseURL
+  -}}
+  {{- with site.Params.organizationLogo }}{{ $org = merge $org (dict "logo" .) }}{{ end -}}
+  {{- with site.Params.organizationAddress }}{{ $org = merge $org (dict "address" .) }}{{ end -}}
+  {{- with site.Params.socialProfiles }}{{ $org = merge $org (dict "sameAs" .) }}{{ end -}}
+  {{- with (index (hugo.Data.organization | default dict) "contacts") }}
+    {{- with .contactPoint }}{{ $org = merge $org (dict "contactPoint" .) }}{{ end -}}
+  {{- end }}
+<script type="application/ld+json">
+{{ $org | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{- end -}}

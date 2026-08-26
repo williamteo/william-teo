@@ -1,0 +1,31 @@
+{{ define "main" }}
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post publications">
+        {{ .Content }}
+
+        {{- range $section := hugo.Data.publications.sections }}
+          {{- $published := slice }}
+          {{- range $section.items }}
+            {{- if not .draft }}{{ $published = $published | append . }}{{ end }}
+          {{- end }}
+          {{- with $published }}
+        <section class="pub-section" id="{{ $section.id }}">
+          <h2 class="pub-section-title">{{ $section.title }}</h2>
+          {{- with $section.blurb }}
+          <p class="pub-section-blurb">{{ . }}</p>
+          {{- end }}
+          <ol class="pub-list">
+            {{- range . }}
+            {{ partial "publication-entry.html" . }}
+            {{- end }}
+          </ol>
+        </section>
+          {{- end }}
+        {{- end }}
+      </article>
+    </div>
+  </div>
+</div>
+{{ end }}

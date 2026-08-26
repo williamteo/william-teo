@@ -1,0 +1,5 @@
+{{- partial "seo/schema" . }}
+{{- partialCached "seo/structured/person" . }}
+{{- if eq .Section "publications" }}{{ partial "seo/structured/publications" . }}{{ end }}
+{{- partial "seo/opengraph" . }}
+{{- partial "seo/twitter" . }}

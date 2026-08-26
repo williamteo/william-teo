@@ -1,0 +1,45 @@
+{{- /* Emits the publications page as a CollectionPage of ScholarlyArticle records.
+       This is what lets search engines recognise the page as research output
+       rather than as generic blog content. Draft entries are excluded. */ -}}
+{{- $page := . -}}
+{{- $articles := slice -}}
+{{- range $section := hugo.Data.publications.sections -}}
+  {{- range $item := $section.items -}}
+    {{- if not $item.draft -}}
+      {{- $authors := slice -}}
+      {{- range $item.authors -}}
+        {{- $authors = $authors | append (dict "@type" "Person" "name" .name) -}}
+      {{- end -}}
+      {{- $article := dict
+        "@type" ($item.schemaType | default "ScholarlyArticle")
+        "name" $item.title
+        "headline" $item.title
+        "author" $authors
+        "url" (printf "%s#%s" $page.Permalink ($item.title | urlize))
+      -}}
+      {{- with $item.year }}{{ $article = merge $article (dict "datePublished" (printf "%v" .)) }}{{ end -}}
+      {{- with ($item.publisher | default $item.venue) }}{{ $article = merge $article (dict "publisher" (dict "@type" "Organization" "name" .)) }}{{ end -}}
+      {{- with $item.summary }}{{ $article = merge $article (dict "abstract" (. | plainify | chomp)) }}{{ end -}}
+      {{- with $item.keywords }}{{ $article = merge $article (dict "keywords" (delimit . ", ")) }}{{ end -}}
+      {{- $urls := slice -}}
+      {{- range where ($item.links | default slice) "url" "!=" "TODO" -}}
+        {{- $urls = $urls | append .url -}}
+      {{- end -}}
+      {{- with $urls }}{{ $article = merge $article (dict "sameAs" .) }}{{ end -}}
+      {{- $articles = $articles | append $article -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- with $articles }}
+<script type="application/ld+json">
+{{ dict
+  "@context" "https://schema.org"
+  "@type" "CollectionPage"
+  "@id" (printf "%s#publications" $page.Permalink)
+  "name" $page.Title
+  "url" $page.Permalink
+  "about" (dict "@id" (printf "%s#person" site.BaseURL))
+  "hasPart" .
+| jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{- end }}

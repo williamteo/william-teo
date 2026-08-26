@@ -1,0 +1,30 @@
+{{- $anchor := .title | urlize -}}
+<li class="pub-item" id="{{ $anchor }}">
+  <h3 class="pub-title">{{ .title }}</h3>
+  <p class="pub-authors">
+    {{- range $i, $author := .authors -}}
+      {{- if $i }}, {{ end -}}
+      {{- if $author.me -}}
+        <span class="pub-author-me">{{ $author.name }}</span>
+      {{- else -}}
+        {{ $author.name }}
+      {{- end -}}
+    {{- end -}}
+  </p>
+  <p class="pub-venue">
+    {{- with .venue }}<span class="pub-venue-name">{{ . }}</span>{{ end -}}
+    {{- with .year }}{{ if $.venue }}, {{ end }}{{ . }}{{ end -}}
+    {{- with .note }} <span class="pub-note">{{ . }}</span>{{ end -}}
+  </p>
+  {{- with .summary }}
+  <p class="pub-summary">{{ . }}</p>
+  {{- end }}
+  {{- $links := where (.links | default slice) "url" "!=" "TODO" }}
+  {{- with $links }}
+  <p class="pub-links">
+    {{- range . }}
+    <a class="pub-link" href="{{ .url }}"{{ if hasPrefix .url "http" }} rel="noopener"{{ end }}>{{ .label }}</a>
+    {{- end }}
+  </p>
+  {{- end }}
+</li>

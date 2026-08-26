@@ -1,0 +1,32 @@
+{{- /* Single source of truth for social/meta title, description and image.
+       Social titles lead with the page subject and always carry the author's
+       name, so a shared link identifies the person rather than the blog. */ -}}
+{{- $author := site.Params.author.name -}}
+{{- $tagline := site.Params.tagline | default site.Params.description -}}
+
+{{- $title := printf "%s — %s" .Title $author -}}
+{{- if .IsHome -}}
+  {{- $title = printf "%s — %s" $author $tagline -}}
+{{- else if eq .Kind "term" -}}
+  {{- $title = printf "%s: %s — %s" (.Data.Singular | humanize | title) .Title $author -}}
+{{- end -}}
+
+{{- $description := .Description | default .Params.subtitle -}}
+{{- if not $description }}{{ $description = .Summary }}{{ end -}}
+{{- /* Taxonomy pages have no body text, so they would otherwise all inherit the
+       same site description. Build one from the term and its posts instead. */ -}}
+{{- if and (not $description) (eq .Kind "term") -}}
+  {{- $titles := slice -}}
+  {{- range first 3 .Pages }}{{ $titles = $titles | append .Title }}{{ end -}}
+  {{- $description = printf "Writing by %s tagged %q" $author .Title -}}
+  {{- with $titles }}{{ $description = printf "%s, including: %s" $description (delimit . ", " " and ") }}{{ end -}}
+  {{- $description = printf "%s." $description -}}
+{{- else if and (not $description) (eq .Kind "taxonomy") -}}
+  {{- $description = printf "Every %s used across the writing of %s." .Data.Singular $author -}}
+{{- end -}}
+{{- if not $description }}{{ $description = site.Params.description }}{{ end -}}
+{{- $description = $description | plainify | chomp -}}
+
+{{- $image := .Params.share_img | default .Params.image | default site.Params.ogImage | default site.Params.logo -}}
+
+{{- return dict "title" $title "description" $description "image" $image -}}

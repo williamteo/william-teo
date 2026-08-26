@@ -1,0 +1,16 @@
+{{- /* Document title, description, keywords and canonical URL.
+       The title leads with the page subject and always carries the author's
+       name, so a search for the person resolves to this site. */ -}}
+{{- $social := partial "seo/social-vars" . -}}
+  <title>{{ $social.title }}</title>
+{{- with $social.description }}
+  <meta name="description" content="{{ . | truncate 300 }}" />
+{{- end }}
+{{- $keywords := .Params.keywords | default .Params.tags | default site.Params.keywords }}
+{{- with $keywords }}
+  <meta name="keywords" content="{{ delimit . ", " }}" />
+{{- end }}
+{{- with site.Params.author.name }}
+  <meta name="author" content="{{ . }}" />
+{{- end }}
+  <link rel="canonical" href="{{ .Permalink }}" />

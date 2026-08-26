@@ -1,0 +1,13 @@
+{{- $social := partial "seo/social-vars" . }}
+  <meta name="twitter:title" content="{{ $social.title | truncate 70 }}" />
+{{- with $social.description }}
+  <meta name="twitter:description" content="{{ . | truncate 200 }}" />
+{{- end }}
+{{- with $social.image }}
+  <meta name="twitter:image" content="{{ . | absURL }}" />
+{{- end }}
+  <meta name="twitter:card" content="{{ if $social.image }}summary_large_image{{ else }}summary{{ end }}" />
+{{- with site.Params.author.twitter }}
+  <meta name="twitter:site" content="@{{ . }}" />
+  <meta name="twitter:creator" content="@{{ . }}" />
+{{- end }}

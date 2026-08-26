@@ -1,0 +1,97 @@
+# Publication records rendered by layouts/publications/list.html
+#
+# Each entry supports:
+#   title    (required)  Full paper title, no trailing period.
+#   authors  (required)  List of names in publication order. Mark yourself with `me: true`.
+#   venue    (required)  Conference/journal/institution. Omit venue claims for unreviewed work.
+#   year     (required)  Publication or submission year.
+#   note                 Short status line, e.g. "To appear" or "Under review".
+#   summary              One or two plain-sentence description. Indexed by search engines.
+#   publisher            Institution for schema.org, when `venue` carries extra words.
+#   schemaType           schema.org type. Defaults to ScholarlyArticle; use Thesis for theses.
+#   links                List of {label, url}. Use PDF / arXiv / Code / DOI / Poster / Slides.
+#   keywords             Topic terms, emitted into the ScholarlyArticle schema.
+#   draft    (bool)      true hides the entry from the rendered page and the sitemap.
+#
+# NOTE: entries marked `draft: true` are placeholders awaiting verified metadata.
+# Fill in the real title, author list, venue, year and links, then set draft: false.
+
+sections:
+  - id: preprints
+    title: Preprints & Under Review
+    blurb: Work circulated ahead of peer review. Venue is not claimed until acceptance.
+    items:
+      - title: "RL²-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models"
+        authors:
+          - name: "Derek Ming Siang Tan"
+          - name: "Shailesh Shailesh"
+          - name: "Srikrishna Iyer"
+          - name: "William Wei Jie Teo"
+            me: true
+          - name: "Yuanliang Ju"
+          - name: "Qiao Gu"
+          - name: "Guillaume Sartoretti"
+        year: 2026
+        note: "Preprint"
+        summary: >-
+          An inference-time steering framework that composes a lightweight offline
+          RL policy with a frozen vision-language-action model, activating only when
+          the base policy is likely to fail. On the SIMPLER and PolaRiS benchmarks,
+          out-of-domain success rates improve by up to 17.3 percentage points.
+        keywords:
+          - vision-language-action models
+          - reinforcement learning
+          - robot learning
+          - test-time scaling
+          - compositional steering
+          - offline reinforcement learning
+        links:
+          - label: Project
+            url: "https://rl2-vla.github.io/"
+          - label: arXiv
+            url: "https://arxiv.org/abs/2607.26991"
+
+  - id: peer-reviewed
+    title: Peer-Reviewed Publications
+    items:
+      - title: "TODO: full TENCON paper title"
+        draft: true
+        authors:
+          - name: "William Wei Jie Teo"
+            me: true
+        venue: "IEEE TENCON"
+        year: 2026
+        note: "Accepted"
+        summary: >-
+          TODO: one-to-two sentence description of the contribution.
+        keywords:
+          - multi-robot systems
+        links:
+          - label: PDF
+            url: "TODO"
+          - label: DOI
+            url: "TODO"
+
+  - id: thesis
+    title: Thesis
+    items:
+      - title: "A natural language processing approach to improve demand forecasting in long supply chains"
+        authors:
+          - name: "William Wei Jie Teo"
+            me: true
+        venue: "Master of Engineering Thesis, Massachusetts Institute of Technology"
+        publisher: "Massachusetts Institute of Technology"
+        schemaType: "Thesis"
+        year: 2020
+        summary: >-
+          A deep learning model (NEMO) that uses natural language processing signals from
+          public text to forecast commodity demand in long supply chains, where information
+          sharing across firms is rarely feasible.
+        keywords:
+          - natural language processing
+          - demand forecasting
+          - supply chain
+          - deep learning
+        links:
+          - label: Thesis
+            url: "https://dspace.mit.edu/handle/1721.1/127104"

@@ -15,6 +15,35 @@ enableGitInfo = true
   mainSections = ["post","posts"]
   # logo = "img/avatar-icon.png"
   # favicon = "img/favicon.ico"
+
+  # Positioning statement. Drives the <title>, og:title and meta description
+  # on the home page; keep it short enough to survive Google's ~60 char cut.
+  tagline = "Strategy and Skill Learning for Multi-Robot Systems"
+  description = "William W. J. Teo works on strategy and skill learning for multi-robot systems \u2014 multi-agent reinforcement learning, game theory, and the representations that let robot teams coordinate."
+  keywords = [
+    "William Teo",
+    "William W. J. Teo",
+    "multi-robot systems",
+    "multi-agent reinforcement learning",
+    "MARL",
+    "skill learning",
+    "robot learning",
+    "game theory",
+    "representation learning",
+    "vision-language-action models",
+  ]
+  # Image used for link previews (og:image / twitter:image).
+  ogImage = "img/og-william.jpg"
+
+  # Emitted as `sameAs` on the Person schema. This is the single strongest
+  # signal tying a name search back to this domain \u2014 add Google Scholar and
+  # ORCID as soon as those profiles exist.
+  socialProfiles = [
+    "https://www.linkedin.com/in/willteo",
+    "https://github.com/williamteo",
+    "https://scholar.google.com/citations?user=kgn0kGkAAAAJ&hl=en",
+    "https://orcid.org/0000-0002-0362-1481",
+  ]
   dateFormat = "January 2, 2006"
   # commit = false
   rss = true
@@ -31,6 +60,22 @@ enableGitInfo = true
     name = "William Teo"
     website = "https://www.william-teo.com"
     linkedin = "willteo"
+    alternateNames = ["William W. J. Teo", "Teo Wei Jie William"]
+    description = "Researcher working on strategy and skill learning for multi-robot systems."
+    image = "img/person-william.jpg"
+    knowsAbout = [
+      "Multi-Agent Reinforcement Learning",
+      "Multi-Robot Systems",
+      "Skill Learning",
+      "Game Theory",
+      "Representation Learning",
+      "Robot Learning",
+    ]
+    # TODO confirm: current affiliation and degree programme.
+    affiliation = "National University of Singapore"
+    alumniOf = ["Massachusetts Institute of Technology", "National University of Singapore"]
+    # jobTitle = ""
+    # twitter = ""
 
 [markup]
   [markup.goldmark]
@@ -56,13 +101,18 @@ enableGitInfo = true
   weight = 1
 
 [[menu.main]]
+  name = "Publications"
+  url = "publications/"
+  weight = 2
+
+[[menu.main]]
   name = "Tags"
   url = "tags"
-  weight = 2
+  weight = 3
 
 [[menu.main]]
   name = "About"
   url = "page/about/"
-  weight = 3
+  weight = 4
 
 

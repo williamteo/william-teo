@@ -1,0 +1,25 @@
+{{- /* Person entity for the site owner. Anchors name-based searches to this
+       domain and links out to the canonical research profiles. */ -}}
+{{- $author := site.Params.author -}}
+{{- $person := dict
+  "@context" "https://schema.org"
+  "@type" "Person"
+  "@id" (printf "%s#person" site.BaseURL)
+  "name" $author.name
+  "url" site.BaseURL
+-}}
+{{- with $author.alternateNames }}{{ $person = merge $person (dict "alternateName" .) }}{{ end -}}
+{{- with $author.jobTitle }}{{ $person = merge $person (dict "jobTitle" .) }}{{ end -}}
+{{- with $author.description }}{{ $person = merge $person (dict "description" .) }}{{ end -}}
+{{- with $author.knowsAbout }}{{ $person = merge $person (dict "knowsAbout" .) }}{{ end -}}
+{{- with $author.affiliation }}{{ $person = merge $person (dict "affiliation" (dict "@type" "Organization" "name" .)) }}{{ end -}}
+{{- with $author.alumniOf }}
+  {{- $schools := slice -}}
+  {{- range . }}{{ $schools = $schools | append (dict "@type" "EducationalOrganization" "name" .) }}{{ end -}}
+  {{- $person = merge $person (dict "alumniOf" $schools) -}}
+{{- end -}}
+{{- with $author.image }}{{ $person = merge $person (dict "image" (. | absURL)) }}{{ end -}}
+{{- with site.Params.socialProfiles }}{{ $person = merge $person (dict "sameAs" .) }}{{ end -}}
+<script type="application/ld+json">
+{{ $person | jsonify (dict "indent" "  ") | safeJS }}
+</script>
