@@ -19,7 +19,7 @@ enableGitInfo = true
   # Positioning statement. Drives the <title>, og:title and meta description
   # on the home page; keep it short enough to survive Google's ~60 char cut.
   tagline = "Strategy and Skill Learning for Multi-Robot Systems"
-  description = "William W. J. Teo works on strategy and skill learning for multi-robot systems \u2014 multi-agent reinforcement learning, game theory, and the representations that let robot teams coordinate."
+  description = "The blog and publications of William W. J. Teo. He works on strategy and skill learning for multi-robot systems, using multi-agent reinforcement learning and game theory."
   keywords = [
     "William Teo",
     "William W. J. Teo",

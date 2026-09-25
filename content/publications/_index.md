@@ -1,6 +1,6 @@
 ---
 title: "Publications"
-description: "Peer-reviewed papers, preprints and theses by William W. J. Teo on strategy and skill learning for multi-robot systems."
+description: "Papers, preprints and thesis by William W. J. Teo on strategy and skill learning for multi-robot systems."
 keywords:
   - William Teo publications
   - multi-agent reinforcement learning
@@ -12,12 +12,9 @@ dontshowmeta: true
 draft: false
 ---
 
-My work is on strategy and skill learning for multi-robot systems. I study how
-a team of robots learns to coordinate through reinforcement learning and game
-theory, and how to detect and react to another's intention. This can be a
-dynamic obstacle or actively adversarial.
+These are my papers, preprints and thesis. My current work is on how teams of
+robots learn to work together, using reinforcement learning and game theory.
 
-I'm happy to discuss research or collaboration. Do reach out!
-
-For anything without a public link, or for a copy of a paper you cannot access,
-[email me](mailto:hello@william-teo.com).
+If you can't get hold of a paper, [email me](mailto:hello@william-teo.com) and
+I'll send you a copy. I'm also happy to talk about research or collaboration, so
+do reach out!

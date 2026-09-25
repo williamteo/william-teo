@@ -19,7 +19,6 @@
 sections:
   - id: preprints
     title: Preprints & Under Review
-    blurb: Work circulated ahead of peer review. Venue is not claimed until acceptance.
     items:
       - title: "RL²-VLA: Adaptive RL Latent Compositional Steering with Test-Time Scaling for Vision-Language-Action Models"
         authors:
@@ -74,7 +73,7 @@ sections:
 
   - id: workshop
     title: Workshop Papers
-    blurb: Refereed but non-archival. The arXiv version is the citable copy.
+    blurb: These workshops don't publish proceedings, so please cite the arXiv version.
     items:
       - title: "Pairwise Approximation Can Select the Wrong Multi-Robot Plan"
         authors:
@@ -83,10 +82,11 @@ sections:
         venue: "IROS 2026 Workshop on Intelligent Information Gathering"
         year: 2026
         summary: >-
-          Many multi-robot coordination methods score a joint plan from singleton and
-          pairwise terms. Replaying every robot subset of recorded four-robot exploration
-          plans shows that the pairwise score picks a different plan from the exact score
-          on six of seven maps at a 15 m range, losing up to a third of the map's coverage.
+          Many multi-robot coordination methods score a joint plan using only terms for
+          single robots and pairs of robots. Replaying every subset of recorded four-robot
+          exploration plans shows that the pairwise score picks a different plan from the
+          exact score on six of seven maps at the 15 m range, with a regret of up to 0.337
+          of map coverage.
         keywords:
           - multi-robot systems
           - multi-robot exploration
