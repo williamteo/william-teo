@@ -72,6 +72,35 @@ sections:
           - label: DOI
             url: "TODO"
 
+  - id: workshop
+    title: Workshop Papers
+    blurb: Refereed but non-archival. The arXiv version is the citable copy.
+    items:
+      - title: "Pairwise Approximation Can Select the Wrong Multi-Robot Plan"
+        authors:
+          - name: "William Wei Jie Teo"
+            me: true
+        venue: "IROS 2026 Workshop on Intelligent Information Gathering"
+        year: 2026
+        summary: >-
+          Many multi-robot coordination methods score a joint plan from singleton and
+          pairwise terms. Replaying every robot subset of recorded four-robot exploration
+          plans shows that the pairwise score picks a different plan from the exact score
+          on six of seven maps at a 15 m range, losing up to a third of the map's coverage.
+        keywords:
+          - multi-robot systems
+          - multi-robot exploration
+          - coordination
+          - set function approximation
+          - Möbius decomposition
+        links:
+          - label: Project
+            url: "https://www.william-teo.com/pairwise-regret/"
+          - label: arXiv
+            url: "https://arxiv.org/abs/2609.29929"
+          - label: Code
+            url: "https://github.com/williamteo/pairwise-regret"
+
   - id: thesis
     title: Thesis
     items:
